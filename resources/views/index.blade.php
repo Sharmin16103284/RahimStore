@@ -1,207 +1,206 @@
-@extends('layout')
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>{{$titleLists->title}}</title>
+    <link rel="stylesheet" href="{{asset('style.css')}}">
+    
 
-@section("content")
+</head>
+<body>
 
-  <!-- banner -->
-  <div class="banner-text">
-    <div class="callbacks_container">
-        <ul class="rslides" id="slider3">
-            <li class="banner">
-                <div class="container">
-                    <h3 class="agile_btxt">
-                        <span>r</span>ahim
-                        <span>s</span>tore</a>
-                    </h3>
-                    <h4 class="w3_bbot">shop exclusive clothing</h4>
-                    <div class="slider-info mt-sm-5">
-                        <h4 class="bn_right">
-                            <span>w</span>omen's
-                            <span>f</span>ashion</h4>
-                        <div class="bnr_clip position-relative">
-                            <h4>get up to
-                                <span class="px-2">45% </span>
-                            </h4>
-                            <div class="d-inline-flex flex-column banner-pos position-absolute text-center">
-                                <div class="bg-flex-item">
-                                    <span>O</span>
-                                </div>
-                                <div class="bg-flex-item">
-                                    <span>F</span>
-                                </div>
-                                <div class="bg-flex-item">
-                                    <span>F
-                                    </span>
-                                </div>
-                            </div>
-                            <p class="text-uppercase py-2">on special sale</p>
-                            <a class="btn btn-primary mt-3 text-capitalize" href="shop.html" role="button">shop now</a>
-                        </div>
-                    </div>
+    <!-- header -->
+  
+    <section id="header">
+        <div class="header container">
+            <div class="nav-bar">
+                <div class="brand">
+                    <a href="#hero">
+                        {{-- <h1> <img style="height:45px; width:55px" src="{{asset($titleLists->image)}}" alt=""> </h1> --}}
+                        <h1><span>U</span>nitech <span>L</span>abel</h1> 
+                    </a>
                 </div>
-            </li>
-            <li class="banner banner2">
-                <div class="container">
-                    <h3 class="agile_btxt">
-                        <span>f</span>ashion
-                        <span>h</span>ub
-                    </h3>
-                    <h4 class="w3_bbot">shop exclusive clothing</h4>
-                    <div class="slider-info mt-sm-5">
-                        <h4 class="bn_right">
-                            <span>m</span>en's
-                            <span>f</span>ashion</h4>
-                        <div class="bnr_clip position-relative">
-                            <h4>get up to
-                                <span class="px-2">35% </span>
-                            </h4>
-                            <div class="d-inline-flex flex-column banner-pos position-absolute text-center">
-                                <div class="bg-flex-item">
-                                    <span>O</span>
-                                </div>
-                                <div class="bg-flex-item">
-                                    <span>F</span>
-                                </div>
-                                <div class="bg-flex-item">
-                                    <span>F
-                                    </span>
-                                </div>
-                            </div>
-                            <p class="text-uppercase py-2">on special sale</p>
-                            <a class="btn btn-primary mt-3 text-capitalize" href="shop.html" role="button">shop now</a>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li class="banner banner3">
-                <div class="container">   
-                    <h3 class="agile_btxt">
-                        <span>f</span>ashion
-                        <span>h</span>ub
-                    </h3>
-                    <h4 class="w3_bbot">shop exclusive clothing</h4>
-                    <div class="slider-info mt-sm-5">
-                        <h4 class="bn_right">
-                            <span>k</span>id's
-                            <span>f</span>ashion</h4>
-                        <div class="bnr_clip position-relative">
-                            <h4>get up to
-                                <span class="px-2">45% </span>
-                            </h4>
-                            <div class="d-inline-flex flex-column banner-pos position-absolute text-center">
-                                <div class="bg-flex-item">
-                                    <span>O</span>
-                                </div>
-                                <div class="bg-flex-item">
-                                    <span>F</span>
-                                </div>
-                                <div class="bg-flex-item">
-                                    <span>F
-                                    </span>
-                                </div>
-                            </div>
-                            <p class="text-uppercase py-2">on special sale</p>
-                            <a class="btn btn-primary mt-3 text-capitalize" href="shop.html" role="button">shop now</a>
-                        </div>
-                    </div>
-                </div>
-            </li>
-        </ul>
-    </div>
-</div>
-<!-- //banner -->
-<!--services-->
 
-<!-- breadcrumbs -->
-<nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
-        <li class="breadcrumb-item">
-            
-        </li>
-    </ol>
-</nav>
-<!-- //breadcrumbs -->
-<!-- Shop -->
-<div class="innerf-pages section">
-    <div class="fh-container mx-auto">
-        <div class="row my-lg-5 mb-5">
-            <!-- grid left -->
-            <div class="side-bar col-lg-3">
-                <!--preference -->
-                <div class="left-side">
-                    
-                </div>
-                <!--preference -->
-                <div class="left-side">
-                    <h3 class="shopf-sear-headits-sear-head">
-                        <span>Price </span>Range</h3>
+                <div class="nav-list">
+                    <div class="hamburger">
+                        <div class="bar"></div>
+                    </div>
+
                     <ul>
-                            @foreach ($price_range as $price_ran)
-                                <li>
-                            <input type="checkbox" class="checked" name="arr1" id="arr1">
-                            <label for="arr1">
-
-                                 <a href="{{URL::to('/priceRange/product/'.$price_ran -> id)}}"> {{$price_ran -> price}}</a>
-                                 
-                                 
-                                 </label>
-                            </li> 
-                                
-                            @endforeach
-                                                           
-
+                        <li><a href="#hero" data-after="Home">Home</a></li>
+                        <li><a href="#service" data-after="Services">Services</a></li>
+                        <li><a href="#project" data-after="Projects">Projects</a></li>
+                        <li><a href="#about" data-after="About">About</a></li>
+                        <li><a href="#contact" data-after="Contact">Contact</a></li>
                     </ul>
                 </div>
-                <!-- // preference -->
-            </div>
-            <!-- //grid left -->
-            <!-- grid right -->
-            <div class="col-lg-9 mt-lg-0 mt-5 right-product-grid">
-                <h5 class="head_agileinfo text-center text-capitalize pb-5">
-        <span>s</span>mart clothing</h5>
-
-        
-
-                <!-- card group  -->
-                <div class="card-group">
-                    <!-- card -->
-                    
-@foreach($viewss as $views)
-                    <div class="col-lg-3 col-sm-6 p-0">
-                        <div class="card product-men p-3">
-                            <div class="men-thumb-item">
-                                <img src="{{asset($views->image)}}" alt="img" class="card-img-top" style="height: 200px">
-                                <div class="men-cart-pro">
-                                    <div class="inner-men-cart-pro">
-                                        <a href="womens.html" class="link-product-add-cart">Quick View</a>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <!-- card body -->
-                            <div class="card-body  py-3 px-2">
-                                <h5 class="card-title text-capitalize">{{$views->name}}</h5>
-                                <div class="card-text d-flex justify-content-between">
-                                    <p class="text-dark font-weight-bold">{{$views->price}} </p>
-                                    <p style="padding-left: 40%">{{$views->date}}</p>
-                                    <p></p>
-                                </div>
-                            </div> 
-                        </div>
-                    </div>
-
-                    @endforeach
-                    <!-- //card -->
-
-                    
-                </div><!-- //card group -->  
-               
-                
             </div>
         </div>
-    </div>
-</div>
-<!--// Shop -->
+    </section>
 
-@endsection
+    <!-- end header -->
 
+    <!--first section hero-->
+
+    <section id="hero" style="background-image: url({{asset($banners->image)}})">
+        <div class="hero container">
+            <div>
+                <h1>{{$banners->title1}} <span></span></h1>
+                <h1>{{$banners->title2}} <span></span></h1>
+                <h1>{{$banners->title3}} <span></span></h1>
+                <a href="#project" type="button" class="cta">Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <!--end first section hero-->
+
+    <!--service section-->
+    <section id="service">
+        <div class="service container">
+            <div class="service-top">
+                <h1 class="section-title">Our <span>Services</span> </h1>
+                <p>{{$serviceTexts->details}}</p>
+            </div>
+
+            <div class="service-bottom">
+
+                @foreach ($serviceList as $serviceLis)
+
+
+                <div class="service-item" style="background-image: url({{asset($serviceLis->image)}})">
+                    <div class="icon">
+                        <img src="https://img.icons8.com/bubbles/50/000000/services.png"/>
+                    </div>
+                    <h2>{{$serviceLis->title}}</h2>
+                    <p>{{$serviceLis->description}}</p>
+                </div>
+
+                @endforeach
+               
+            </div>
+        </div>
+    </section>
+    <!--end service section-->
+
+    <!-- project section -->
+
+    <section id="project">
+        <div class="project container">
+            <div class="project-header">
+                <h1 class="section-title">Recent <span>Projects</span></h1>
+            </div> 
+
+            <div class="all-project">
+
+                @foreach ($projectList as $projectLis)
+                <div class="project-item">
+                    <div class="project-info">
+                        <h1>{{$projectLis->headline}}</h1><br>
+                        <h2>{{$projectLis->title}}</h2><br>
+                        <p>{{$projectLis->description}}</p>
+                    </div>
+
+                    <div class="project-image">
+                        <img src="{{asset($projectLis->image)}}" alt="">
+                    </div>
+                </div>
+                @endforeach
+
+            </div>
+        </div>
+    </section>
+
+    <!-- project section -->
+
+    <!-- about section -->
+
+    <section id="about">
+        <div class="about container">
+            <div class="col-left">
+                <div class="about-image">
+                    <img src="{{asset($aboutLists->image)}}" alt="">
+                </div>
+            </div>
+
+            <div class="col-right">
+                <h1 class="section-title">About <span>Us</span></h1>
+                <h2>{{$aboutLists->name}}</h2>
+                <p>{{$aboutLists->description}}</p>
+
+                <a class="cta" href="#service">Our Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- end of about section -->
+
+    <!-- contct section -->
+
+    <section id="contact">
+        <div class="contact container">
+            <div>
+                <h1 class="section-title">Contact <span>info</span></h1>
+            </div>
+            <div class="contact-items">
+                <div class="contact-item">
+                    <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/phone.png"/></div>
+                    <div class="contact-info">
+                        <h1>Phone</h1>
+                        <h2>{{$contactLists->phone1}}</h2>
+                        <h2>{{$contactLists->phone2}}</h2>
+                    </div>
+                </div>
+                <div class="contact-item">
+                        <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/email.png"/></div>
+                        <div class="contact-info">
+                            <h1>Email</h1>
+                            <h2>{{$contactLists->email}}</h2>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/address.png"/></div>
+                        <div class="contact-info">
+                            <h1>Address</h1>
+                            <h2>{{$contactLists->address}}</h2>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- end contact section -->
+
+    <!-- footer section -->
+
+    <section id="footer">
+        <div class="footer container">
+            <div class="brand">
+                <h1><span>U</span>nitch <span>L</span>abel</h1> <br>
+
+                <div class="social-icon">
+                    <div class="social-item">
+                        <a href="{{$socialLists->facebook}}" target="blank"><img src="https://img.icons8.com/bubbles/200/000000/facebook-new.png"/></a>
+                    </div>
+                    <div class="social-item">
+                        <a href="{{$socialLists->linkedin}}" target="blank"><img src="https://img.icons8.com/bubbles/200/000000/linkedin.png"/></a>
+                    </div>
+                    <div class="social-item">
+                        <a href="{{$socialLists->twitter}}" target="blank"><img src="https://img.icons8.com/bubbles/200/000000/twitter.png"/></a>
+                    </div>
+                    <div class="social-item">
+                        <a href="{{$socialLists->github}}" target="blank"><img src="https://img.icons8.com/bubbles/200/000000/github.png"/></a>
+                    </div>
+                </div>
+                <p>Copyright © 2021 {{$footerLists->footer}}. All rights reserved</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- end footer section -->
+
+    <script src="{{asset('app.js')}}"></script>
+</body>
+</html>
